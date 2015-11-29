@@ -8,7 +8,7 @@ import android.widget.TextView;
  * Created by Pablo on 29/11/15.
  */
 public class RecyclerItemViewHolder extends RecyclerView.ViewHolder  implements RecyclerItemInterface{
-    private final TextView mItemTextView;
+    public final TextView mItemTextView;
 
     public RecyclerItemViewHolder(final View parent, TextView itemTextView) {
         super(parent);

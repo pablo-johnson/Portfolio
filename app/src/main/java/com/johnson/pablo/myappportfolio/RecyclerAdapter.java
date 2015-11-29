@@ -1,9 +1,12 @@
 package com.johnson.pablo.myappportfolio;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -11,10 +14,12 @@ import java.util.List;
  * @author Pablo Johnson
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    private final Context mContext;
     private List<String> mItemList;
 
-    public RecyclerAdapter(List<String> itemList) {
+    public RecyclerAdapter(Context context, List<String> itemList) {
         mItemList = itemList;
+        mContext = context;
     }
 
     @Override
@@ -32,10 +37,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
+        if (position > 0) {
+            RecyclerItemInterface holder = (RecyclerItemInterface) viewHolder;
+            final String itemText = mItemList.get(position);
+            holder.setItemText(itemText);
 
-        RecyclerItemInterface holder = (RecyclerItemInterface) viewHolder;
-        String itemText = mItemList.get(position);
-        holder.setItemText(itemText);
+            ((RecyclerItemViewHolder) viewHolder).mItemTextView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(v.getContext(), itemText, Toast.LENGTH_SHORT).show();
+                }
+            });
+            if (position == getItemCount() - 1) {
+                ((RecyclerItemViewHolder) viewHolder).mItemTextView
+                        .setBackgroundColor(mContext.getResources().getColor(R.color.colorUltra));
+                ((RecyclerItemViewHolder) viewHolder).mItemTextView.setTextColor(Color.WHITE);
+            }
+        }
     }
 
     @Override
