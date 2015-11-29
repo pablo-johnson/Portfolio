@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="app_names">
+        <item>SPOTIFY STREAMER</item>
+        <item>SCORES APP</item>
+        <item>LIBRARY APP</item>
+        <item>BUILD IT BIGGER</item>
+        <item>XYZ READER</item>
+        <item>CAPSTONE: MY OWN APP</item>
+        <item>CAPSTONE: MY OWN APP</item>
+        <item>CAPSTONE: MY OWN APP</item>
+        <item>CAPSTONE: MY OWN APP</item>
+        <item>CAPSTONE: MY OWN APP</item>
+        <item>CAPSTONE: MY OWN APP</item>
+        <item>CAPSTONE: MY OWN APP</item>
+    </string-array>
+</resources>
