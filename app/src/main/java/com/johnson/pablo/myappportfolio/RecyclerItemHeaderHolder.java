@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 /**
- * Created by Pablo on 29/11/15.
+ * @author Pablo Johnson
  */
 public class RecyclerItemHeaderHolder extends RecyclerView.ViewHolder implements RecyclerItemInterface {
     private final TextView mItemTextView;

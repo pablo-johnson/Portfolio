@@ -27,7 +27,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         switch (viewType) {
             case 0:
                 return RecyclerItemHeaderHolder
-                        .newInstance(LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_main_header, parent, false));
+                        .newInstance(LayoutInflater.from(parent.getContext()).inflate(R.layout.main_header, parent, false));
             case 1:
                 return RecyclerItemViewHolder
                         .newInstance(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_apps, parent, false));
